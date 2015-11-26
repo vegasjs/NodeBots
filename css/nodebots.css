@@ -12,11 +12,11 @@ h1, h2 {
 
 h1 {
 	font-family: 'Monda';
-  line-height: 100px;
+  line-height: 90px;
   font-size: 80px;
 }
 h2 {
-  line-height: 40px;
+  line-height: 30px;
   font-size: 20px;
 }
 
@@ -35,7 +35,7 @@ a:hover { color: #00FFFF; }
   text-align: center;
   display: block;
   width: 800px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 #header h1 {
@@ -43,26 +43,32 @@ a:hover { color: #00FFFF; }
 }
 
 #menu {
-    font-family: 'Monda';
     text-transform: uppercase;
     list-style: none outside none;
     padding: 0;
-    text-align: center;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
 }
 
 #menu li {
-    margin: 0 5px;
+    margin: 0 10px;
     display: inline;
-    line-height: 16px;
 }
 
 #menu a {
     color: white;
-    padding-left: 24px;
+    padding-left: 26px;
+    font-size: 20px;
+    font-family: 'Monda';
+    font-weight: bold;
 }
 
 #menu a.current {
   background: url(../images/cursor.png) no-repeat;
+  background-position: left 2px;
+  color: #F8E01E;
 }
 
 #foreground {
@@ -89,7 +95,7 @@ a:hover { color: #00FFFF; }
     border-radius: 10px;
     border-style: solid;
     border-width: 4px;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -139,18 +145,16 @@ a:hover { color: #00FFFF; }
   padding-left: 24px;
 }
 
-ul.fruit li {
+ul.leds li {
   background-repeat: no-repeat;
   line-height: 16px;
   margin-bottom: 16px;
 }
 
-ul.fruit li:nth-child(5n+1) { background-image: url(../images/strawberry.png); }
-ul.fruit li:nth-child(5n+2) { background-image: url(../images/orange.png); }
-ul.fruit li:nth-child(5n+3) { background-image: url(../images/cherries.png); }
-ul.fruit li:nth-child(5n+4) { background-image: url(../images/melon.png); }
-ul.fruit li:nth-child(5n+5) { background-image: url(../images/apple.png); }
-ul.fruit li:last-child {
+ul.leds li:nth-child(3n+1) { background-image: url(../images/led-box-red.gif); }
+ul.leds li:nth-child(3n+2) { background-image: url(../images/led-box-green.gif); }
+ul.leds li:nth-child(3n+3) { background-image: url(../images/led-box-blue.gif); }
+ul.leds li:last-child {
   margin-bottom: 0;
 }
 
@@ -158,36 +162,32 @@ ul.fruit li:last-child {
 
 a.slack {
   background: url(../images/slack.png) no-repeat;
-  padding-left: 24px;
+  background-position: 2px center;
+  padding-left: 22px;
 }
 
 a.github {
   background: url(../images/github.png) no-repeat;
-  padding-left: 24px;
+  background-position: 2px center;
+  padding-left: 22px;
 }
 
 a.meetup {
   background: url(../images/meetup.png) no-repeat;
-  padding-left: 24px;
+  background-position: 2px center;
+  padding-left: 22px;
 }
 
 a.youtube {
   background: url(../images/youtube.png) no-repeat;
-  padding-left: 24px;
+  background-position: 2px center;
+  padding-left: 22px;
 }
 
 a.slides {
   background: url(../images/ppt.png) no-repeat;
-  padding-left: 24px;
-}
-
-.love {
-  background: url(../images/heart.png) no-repeat;
-  text-indent: -9999px;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
+  background-position: 2px center;
+  padding-left: 22px;
 }
 
 /* Modals */
@@ -281,6 +281,8 @@ a.button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  margin: 0 3px;
+  font-family: 'Monda';
 }
 
 a.button:hover {
