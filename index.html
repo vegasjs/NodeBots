@@ -1,6 +1,84 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Hi.</title>
-  </head>
-  <body>Hello.</body>
+<head>
+	<title>NodeBots.Vegas()</title>
+	<link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="css/nodebots.css" media="all" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div id="foreground">
+
+		<a href="#/" id="header">
+			<div class="nodebot">
+				<div class="icon">
+					<div class="bobble"></div>
+					<div class="antenna"></div>
+					<div class="head">
+						<div class="eye left"></div>
+						<div class="eye right"></div>
+					</div>
+					<div class="neck"></div>
+					<div class="neck"></div>
+				</div>
+			</div>
+			<h1>NodeBots Vegas</h1>
+			<h2>JavaScript + Hardware = ???</h2>
+		</a>
+
+		<ul id="menu">
+			<li><a href="#/about" class="current">About</a></li>
+			<li><a href="#/resources">Resources</a></li>
+			<li><a href="#/chat">Chat</a></li>
+		</ul>
+
+		<a name="about"></a>
+		<div class="dialog" id="about">
+			<div id="next-meetup"></div>
+			<p>We meet on the third Tuesday of every month to talk about JavaScript, node.js and more.
+				Developers of all levels are welcome!</p>
+		</div>
+
+		<a name="resources"></a>
+		<div class="dialog" id="resources">
+			<p>Want to get better at JavaScript? Here are some of our favorite resources!</p>
+			<ul class="fruit">
+				<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JavaScript</a></li>
+				<li><a href="http://nodeschool.io/">NodeSchool</a></li>
+				<li><a href="http://javascriptweekly.com/">JavaScript Weekly</a></li>
+				<li><a href="http://superherojs.com/">SuperHero JS</a></li>
+			</ul>
+		</div>
+
+		<a name="chat"></a>
+		<div class="dialog" id="chat">
+			<p>We have a <a href="https://vegasjs.slack.com/" class="slack">slack chat room</a>. Want to join us?
+			Just <a href="http://vegasjs-signup.meteor.com/">request an invite</a>!</p>
+			<p>You are encouraged to use the chat room to ask JavaScript questions, collaborate on stuff,
+			and keep in touch between meetings. Abusive behavior will not be tolerated. Startup
+			talk is discouraged.</p>
+		</div>
+	</div>
+
+	<div id="fork">
+		<a href="https://github.com/vegasjs/NodeBots" class="github">GitHub</a>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="javascript/modal.js"></script>
+	<script src="javascript/route.js"></script>
+	<script src="javascript/meetup.js"></script>
+	<script id="next-meetup-template" type="x-tmpl-mustache">
+		<div id="meetup-date">
+			<div class="date"><span class="month">{{ month }}</span><span class="day">{{ day }}</span></div>
+			<div class="info">
+				<div class="name">Next up <a href="{{ url }}" class="meetup">{{ name }}</a></div>
+				<div class="count">{{ count }} JavaScripters going! <a href="{{ url }}" class="button">RSVP</a></div>
+			</div>
+		</div>
+	</script>
+
+</body>
 </html>

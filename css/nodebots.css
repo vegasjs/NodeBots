@@ -1,0 +1,419 @@
+html, body {
+  height: 100%;
+}
+
+html * {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+	color: white;
+}
+
+h1 {
+	font-family: 'Monda';
+  line-height: 100px;
+  font-size: 80px;
+}
+h2 {
+  line-height: 40px;
+  font-size: 20px;
+}
+
+body {
+	background: url('../images/background.png') #0d5178;
+}
+
+a {
+    color: #00BFFF;
+    text-decoration: none;
+}
+
+a:hover { color: #00FFFF; }
+
+#header {
+  text-align: center;
+  display: block;
+  width: 800px;
+  margin: 20px auto;
+}
+
+#header h1 {
+  display: inline-block;
+}
+
+#menu {
+    font-family: 'Monda';
+    text-transform: uppercase;
+    list-style: none outside none;
+    padding: 0;
+    text-align: center;
+}
+
+#menu li {
+    margin: 0 5px;
+    display: inline;
+    line-height: 16px;
+}
+
+#menu a {
+    color: white;
+    padding-left: 24px;
+}
+
+#menu a.current {
+  background: url(../images/cursor.png) no-repeat;
+}
+
+#foreground {
+  min-height: 100%;
+  margin-bottom: -25px;
+}
+
+#foreground:after {
+  content: "";
+  display: block;
+  height: 25px;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.dialog {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 4px;
+    margin-top: 20px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-family: 'Monda';
+    color: white;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+    line-height: 30px;
+}
+
+.sponsor {
+  vertical-align: baseline;
+}
+
+.dialog > h2 {
+  color: #BBB;
+  margin-top: 16px;
+}
+
+.dialog:first-of-type {
+    display: block;
+}
+
+.dialog p {
+  margin-bottom: 10px;
+  text-indent: 16px;
+}
+
+.dialog p:last-child {
+  margin-bottom: 0;
+}
+
+.dialog section {
+  margin-bottom:17px;
+}
+
+
+/* List Items */
+
+.dialog ul {
+  margin-top: 16px;
+}
+
+.dialog li {
+  padding-left: 24px;
+}
+
+ul.fruit li {
+  background-repeat: no-repeat;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+
+ul.fruit li:nth-child(5n+1) { background-image: url(../images/strawberry.png); }
+ul.fruit li:nth-child(5n+2) { background-image: url(../images/orange.png); }
+ul.fruit li:nth-child(5n+3) { background-image: url(../images/cherries.png); }
+ul.fruit li:nth-child(5n+4) { background-image: url(../images/melon.png); }
+ul.fruit li:nth-child(5n+5) { background-image: url(../images/apple.png); }
+ul.fruit li:last-child {
+  margin-bottom: 0;
+}
+
+/* Decorated Links */
+
+a.slack {
+  background: url(../images/slack.png) no-repeat;
+  padding-left: 24px;
+}
+
+a.github {
+  background: url(../images/github.png) no-repeat;
+  padding-left: 24px;
+}
+
+a.meetup {
+  background: url(../images/meetup.png) no-repeat;
+  padding-left: 24px;
+}
+
+a.youtube {
+  background: url(../images/youtube.png) no-repeat;
+  padding-left: 24px;
+}
+
+a.slides {
+  background: url(../images/ppt.png) no-repeat;
+  padding-left: 24px;
+}
+
+.love {
+  background: url(../images/heart.png) no-repeat;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+/* Modals */
+
+.modal {
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+  display: none;
+}
+
+.embeddable iframe {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+/* Next Meetup */
+
+#next-meetup {
+  display: none;
+}
+
+#meetup-date {
+  height: 80px;
+  clear: both;
+}
+
+#meetup-date .date {
+  padding-top: 2px;
+  text-align: center;
+  color: white;
+  width: 64px;
+  height: 64px;
+  float: left;
+}
+
+#meetup-date .month {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: red;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: 'Monda';
+}
+
+#meetup-date .day {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size:22px;
+  line-height: 40px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-family: 'Monda';
+}
+
+#meetup-date .info {
+  padding-left: 80px;
+  line-height: 32px;
+}
+
+#next-meetup .name {
+  font-size: 18px;
+}
+
+#meetup-date .count {
+  font-size: 12px;
+}
+
+a.button {
+  border-style: solid;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a.button:hover {
+  color: yellow;
+}
+
+#fork {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Monda';
+  color: white;
+  font-size: 16px;
+}
+
+#fork a { color: #FFF; opacity: 0.5; }
+#fork a:hover { opacity: 1; }
+
+#credits {
+  opacity: 0.5;
+  font-family: 'Monda';
+  color: white;
+  font-size: 10px;
+  text-align: right;
+  padding: 10px 10px 5px 0;
+}
+
+/*
+
+  Nodebot Head!
+
+ */
+
+.nodebot{
+  margin: 0 auto;
+  z-index:2;
+  opacity: 1;
+  width:80px; /* all the nested css is done as percentages of this, so you can scale it to your <3's content */
+  height:80px;
+  margin-right: 1em;
+  background-color: #F8E01E;
+  display: inline-block;
+  position: relative;
+}
+.nodebot .icon{
+  position:absolute;
+  bottom:8%;
+  right:8%;
+  width:45.6%;
+  height:50%;
+}
+.nodebot .icon * {
+  background: #2e2e2c;
+}
+.nodebot .icon .bobble{
+  width:12.5%;
+  height:12%;
+  border-radius: 100%;
+  margin:5% auto -3.8%;
+}
+.nodebot .antenna{
+  width:6%;
+  margin:0 auto 4%;
+  height:16.5%;
+  border-bottom-left-radius: 80% 30%;
+  border-bottom-right-radius: 80% 30%;
+}
+.nodebot .head{
+  width: 100%;
+  height: 48.5%;
+  border-top-left-radius: 15% 25%;
+  border-top-right-radius: 15% 25%;
+  position:relative;
+}
+.nodebot .head .eye{
+  width:18%;
+  height:33.5%;
+  margin:0 18.2%;
+  border-radius: 100%;
+  background-color: #F8E01E;
+  display: inline-block;
+  position:absolute;
+  top:26%;
+  left: 0px;
+  -webkit-animation: blink 5s 2s infinite;
+  animation: blink 5s 2s infinite;
+}
+.nodebot .eye.right{
+  left: auto;
+  right:0;
+}
+.nodebot .head .eye.blink {
+  height: 6%;
+  top:36%;
+  border-radius: 0;
+  background-color: #000;
+}
+.nodebot .neck{
+  border-radius: 20px;
+  width: 69%;
+  height: 6%;
+  margin: 3.6% auto 0;
+}
+.nodebot .neck:last-child{
+  width: 48%;
+}
+
+@-webkit-keyframes blink {
+  0%, 4%, 8%, 100%{
+    height:33.5%;
+    border-radius: 100%;
+    background-color: #F8E01E;
+    top:26%;
+  }
+  2%, 6% {
+    height: 6%;
+    top:36%;
+    border-radius: 0;
+    background-color: #000;
+  }
+}
+
+@keyframes blink {
+  0%, 4%, 8%, 100%{
+    height:33.5%;
+    border-radius: 100%;
+    background-color: #F8E01E;
+    top:26%;
+  }
+  2%, 6% {
+    height: 6%;
+    top:36%;
+    border-radius: 0;
+    background-color: #000;
+  }
+}
