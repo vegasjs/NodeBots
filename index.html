@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NodeBots.Vegas()</title>
+	<title>new NodeBots.Vegas()</title>
 	<link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="css/nodebots.css" media="all" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="/img/nodebot.png" />
@@ -37,26 +37,55 @@
 		<a name="about"></a>
 		<div class="dialog" id="about">
 			<div id="next-meetup"></div>
-			<p>We meet on the third Tuesday of every month to talk about JavaScript, node.js and more.
-				Developers of all levels are welcome!</p>
+			<p>NodeBots Vegas is all about experimenting at the intersection of hardware and software:</p>
+			<ul>
+				<li>We don't normally have speakers - just bring your hardware and your laptop!</li>
+				<li>We talk about everything from blinking LEDs with Arduinos and Raspberry Pis to drones, robots, wearables and more!</li>
+				<li>Interested, but no idea how to get started? Check out the <a href="#resources">resources</a> tab first, then come and we'll show you the ropes.</li>
+				<li>JavaScript is not a required - all languages are welcome. Want to hack in Ruby, Python, Lua, C or Java? No problem!</li>
+			</ul>
+			<p>We meet on the first Monday of every month.</p>
 		</div>
 
 		<a name="resources"></a>
 		<div class="dialog" id="resources">
-			<p>Want to get better at JavaScript? Here are some of our favorite resources!</p>
-			<ul class="leds">
-				<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JavaScript</a></li>
-				<li><a href="http://nodeschool.io/">NodeSchool</a></li>
-				<li><a href="http://javascriptweekly.com/">JavaScript Weekly</a></li>
-				<li><a href="http://superherojs.com/">SuperHero JS</a></li>
+			<p>Want to get started with JavaScript and Hardware? Here are some of our favorite resources:</p>
+			<ul>
+				<li><a href="http://nodebots.io/">NodeBots.io</a> - Find other local NodeBots meetups</li>
 			</ul>
+
+			<h3>Tutorials</h3>
+			<ul>
+				<li><a href="http://node-ardx.org/">node-ardx</a> - tutorials for using using an Arduino with node and various components</li>
+				<li><a href="https://www.npmjs.com/package/nodebot-workshop">nodebots workshop</a> - a tutorial in the nodeschool 'workshopper' format that requires a bit of terminal knowledge to get started.</li>
+				<li><a href="https://www.youtube.com/watch?v=0Q3hrKUwxDM">sumobot tutorial</a> - slightly dated video tutorial on assembling and programming a sumobot</li>
+				<li><a href="https://learn.adafruit.com/">Adafruit Learning System</a> - a lot of tutorials for products available at Adafruit</li>
+			</ul>
+
+			<h3>Software</h3>
+			<ul>
+				<li><a href="http://johnny-five.io/">Johnny-Five</a> - a high level JavaScript library for working with hardware</li>
+			</ul>
+
+			<h3>Microcontrollers</h3>
+			<ul>
+				<li><a href="http://arduino.cc">Arduino</a> - this is the most ubiquitous and popular microcontroller. It is supported by Johnny-Five and a lot of other software libraries for hardware.</li>
+				<li><a href="https://www.raspberrypi.org/">Raspberry Pi</a> - not really a microcontroller, but a tiny computer that can be used to talk to hardware via special <abbr title="General Purpose Input &amp; Output">GPIO</abbr> pins. You will need the <a href="https://www.npmjs.com/package/raspi-io">raspi-io</a> plugin for Johnny-Five.</li>
+				<li><a href="https://www.particle.io/">Particle Photon</a> - an inexpensive ($20) wifi capable microcontroller that you can control from Johnny-Five wirelessly using the <a href="https://www.npmjs.com/package/particle-io">particle-io</a> plugin and the <a href="https://github.com/voodootikigod/voodoospark">voodoospark</a> firmware on the device.</li>
+			</ul>
+
+			<h3>Robots and Drones</h3>
+			<ul>
+				<li><a href="http://www.nodecopter.com/">NodeCopters</a> - control drones from JavaScript!</li>
+			</ul>
+
 		</div>
 
 		<a name="chat"></a>
 		<div class="dialog" id="chat">
 			<p>We have a <a href="https://vegasjs.slack.com/" class="slack">slack chat room</a>. Want to join us?
 			Just <a href="http://vegasjs-signup.meteor.com/">request an invite</a>!</p>
-			<p>You are encouraged to use the chat room to ask JavaScript questions, collaborate on stuff,
+			<p>You are encouraged to use the #nodebots room to ask Hardware and JavaScript questions, collaborate on stuff,
 			and keep in touch between meetings. Abusive behavior will not be tolerated. Startup
 			talk is discouraged.</p>
 		</div>

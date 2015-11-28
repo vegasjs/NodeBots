@@ -25,7 +25,12 @@ $(function() {
 			$(sections[0]).show();
 		}
 
-		document.title = 'NodeBots.' + route + '()';
+		if (route) {
+			document.title = 'nodeBotsVegas.' + route + '()';
+		} else {
+			document.title = 'new NodeBots.Vegas()';
+		}
+
 	});
 
 	$(window).trigger('hashchange');
