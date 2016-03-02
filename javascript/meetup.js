@@ -4,7 +4,7 @@ $(function() {
     This is a URL signed with an API key. Changing any parameters will cause it
     to break. More info: http://www.meetup.com/meetup_api/auth/#keysign
   */
-  var signedUrl = "http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=vegasjs&desc=false&offset=0&format=json&page=200&fields=&sig_id=7287936&sig=397330670d88fc0bc63f94e6124c30c2ed1f9830";
+  var signedUrl = "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=NodeBots-Vegas&page=200&fields=&order=time&status=upcoming&desc=false&sig_id=7287936&sig=79371534ffaa9208f0cacbadbd0d67a30b7a884b";
 
   var meetupTemplate = document.getElementById("next-meetup-template").innerHTML;
 
@@ -37,6 +37,7 @@ $(function() {
             day: date.getDate(),
             url: meetup.event_url,
             count: meetup.yes_rsvp_count,
+            member: meetup.yes_rsvp_count == 1 ? 'NodeBotter' : 'NodeBotters',
             name: meetup.name
           };
           $('#next-meetup').html( notMustache( meetupTemplate, data ) ).slideDown();
